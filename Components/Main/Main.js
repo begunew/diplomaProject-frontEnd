@@ -7,13 +7,14 @@ import CategoryItem from '../UsableComponents/CategoryItem/CategoryItem';
 import SaleComponent from '../UsableComponents/SaleComponent/SaleComponent';
 import CartIcon from '../UsableComponents/CartIcon/CartIcon';
 import Cart from '../Cart/Cart';
+import Dog from '../Dog/Dog';
+import Cat from '../Cat/Cat';
 
 const Main = ({navigation}) => {
   return (
     <ScrollView>
       <View style={styles.container}>
         <Logo />
-
         <Pressable
           style={styles.pressableCart}
           onPress={() => {

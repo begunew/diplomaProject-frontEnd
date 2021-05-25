@@ -26,13 +26,9 @@ const Stack = createStackNavigator();
 
 const App = () => {
   useEffect(() => {
-    let isMounted = true;
     SplashScreen.hide();
-
-    return () => {
-      isMounted = false;
-    };
   }, []);
+
   return (
     <>
       {Platform.OS === 'ios' && <StatusBar barStyle="dark-content" />}

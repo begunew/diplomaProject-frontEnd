@@ -35,7 +35,8 @@ const styles = StyleSheet.create({
   subtotal: {
     color: 'gray',
     left: 33,
-    marginTop: 10,
+    fontSize: 16,
+    marginTop: 5,
   },
   price: {
     fontWeight: 'bold',

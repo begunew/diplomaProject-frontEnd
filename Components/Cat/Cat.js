@@ -1,12 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import {View, Pressable, Text, ScrollView} from 'react-native';
 import styles from './styles';
-import CartIcon from '../UsableComponents/CartIcon/CartIcon';
 import ShopItem from '../UsableComponents/ShopItem/ShopItem';
 import axios from 'axios';
 const Cat = ({navigation}) => {
   const [products, setProducts] = useState('');
-  const mounted = false;
   useEffect(() => {
     const getData = async () => {
       axios
@@ -23,7 +21,7 @@ const Cat = ({navigation}) => {
         });
     };
     getData();
-  });
+  }, []);
 
   let productsMap =
     products.length > 0 ? (

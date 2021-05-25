@@ -96,12 +96,12 @@ const Cart = ({navigation}) => {
 
       {/* Footer */}
       <View style={styles.footer}>
-        <Text style={styles.subtotal}>Subtotal</Text>
+        <Text style={styles.subtotal}>Total</Text>
         <Text style={styles.price}>
           {total.length > 0 ? (
             carts
               .map((cart) => cart.price * cart.qty)
-              .reduce((a, b) => a + b, 0)
+              .reduce((a, b) => a + b, 0) + '₮'
           ) : (
             <View></View>
           )}
