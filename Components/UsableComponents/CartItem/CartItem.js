@@ -6,20 +6,10 @@ import styles from './styles';
 const CartItem = (props) => {
   return (
     <View>
-      <Pressable
-        style={styles.pressableX}
-        onPress={() => {
-          axios.delete(`http://10.0.2.2:3000/cart/remove`, {
-            data: {id: props.id},
-          });
-        }}>
+      <Pressable style={styles.pressableX} onPress={props.onPress}>
         <Text style={styles.X}>x</Text>
       </Pressable>
-      <Pressable
-        style={styles.pressableContainer}
-        onPress={() => {
-          console.warn('xd');
-        }}>
+      <Pressable style={styles.pressableContainer}>
         <View style={styles.container}>
           <View style={styles.imageContainer}>
             <Image style={styles.image} source={{uri: props.image}} />

@@ -22,50 +22,61 @@ const AddressInfo = ({navigation}) => {
           address,
           details,
         })
-        .then(navigation.navigate('Paypal'))
+        .then((res) => {
+          console.log('Response: ', res.data);
+          navigation.navigate('Paypal');
+        })
         .catch((err) => console.log(err));
     }
   };
 
   return (
-    <View>
-      <Text>Full Name</Text>
-      <TextInput
-        style={{height: 40, margin: 12, borderWidth: 1}}
-        value={fullName}
-        onChangeText={setName}
-      />
-
-      <Text>Email</Text>
-      <TextInput
-        style={{height: 40, margin: 12, borderWidth: 1}}
-        value={email}
-        onChangeText={setEmail}
-      />
-
-      <Text>Phone Number</Text>
-      <TextInput
-        style={{height: 40, margin: 12, borderWidth: 1}}
-        value={phone}
-        keyboardType={'numeric'}
-        onChangeText={setPhone}
-      />
-
-      <Text>Address</Text>
-      <TextInput
-        style={{height: 40, margin: 12, borderWidth: 1}}
-        value={address}
-        onChangeText={setAddress}
-      />
-
-      <Text>Additional Details</Text>
-      <TextInput
-        style={{height: 40, margin: 12, borderWidth: 1}}
-        value={details}
-        onChangeText={setDetails}
-      />
-      <Pressable onPress={handleSubmit}>
-        <Text>Submit</Text>
+    <View style={styles.container}>
+      <View style={{marginTop: 20}}></View>
+      <View style={styles.inputLine}>
+        <Text style={styles.text}>Full Name</Text>
+        <TextInput
+          style={styles.input}
+          value={fullName}
+          onChangeText={setName}
+        />
+      </View>
+      <View style={styles.inputLine}>
+        <Text style={styles.text}>Email</Text>
+        <TextInput
+          style={styles.input}
+          value={email}
+          keyboardType={'email-address'}
+          onChangeText={setEmail}
+        />
+      </View>
+      <View style={styles.inputLine}>
+        <Text style={styles.text}>Phone Number</Text>
+        <TextInput
+          style={styles.input}
+          value={phone}
+          keyboardType={'numeric'}
+          onChangeText={setPhone}
+        />
+      </View>
+      <View style={styles.inputLine}>
+        <Text style={styles.text}>Address</Text>
+        <TextInput
+          style={styles.input}
+          value={address}
+          onChangeText={setAddress}
+        />
+      </View>
+      <View style={styles.inputLine}>
+        <Text style={styles.text}>Additional Details</Text>
+        <TextInput
+          style={styles.input}
+          value={details}
+          onChangeText={setDetails}
+        />
+      </View>
+      <Pressable style={styles.button} onPress={handleSubmit}>
+        <Text style={styles.buttonText}>Submit</Text>
       </Pressable>
     </View>
   );

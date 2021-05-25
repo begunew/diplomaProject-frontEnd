@@ -19,7 +19,6 @@ const ItemTransition = ({route, navigation}) => {
         cartItemName,
       })
       .then((res) => {
-        console.log('Response: ', res.data);
         navigation.navigate('Cart', {id, qty, price});
       })
       .catch((err) => {

@@ -18,7 +18,6 @@ import Dog from './Components/Dog/Dog';
 import Cat from './Components/Cat/Cat';
 import SplashScreen from 'react-native-splash-screen';
 import Cart from './Components/Cart/Cart';
-import Test from './Components/Test/Test';
 import ItemTransition from './Components/ItemTransition/ItemTransition';
 import AddressInfo from './Components/AddressInfo/AddressInfo';
 import Paypal from './Components/Paypal/Paypal';
